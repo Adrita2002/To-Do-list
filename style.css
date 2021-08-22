@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+body{
+    background: url("pattern2.jpg") repeat;
+    overflow-x: hidden;
+    z-index:-1;
+    opacity: 0.9;
+}
+nav{
+    display: flex;
+justify-content: space-between;
+background-color: black;
+color: yellow;
+padding:15px;
+}
+.container{
+    margin:30px 0;
+}
+.to-do{
+    font-weight: bold;
+font-size: large;
+}
+
+.search input{
+    width: 35vw;
+    /* background-color: rgb(241, 241, 192); */
+    color:rgb(223, 62, 4);
+    border:1px solid white;
+    padding:0 4px;
+}
+
+.search-btn{
+    background-color: black;
+color: yellow;
+border: 1.5px solid yellow;
+padding: 1px 5px;
+border-radius: 5px;
+cursor: pointer;
+}
+.search-btn:hover{
+    color:#fe5310;
+    border:1.5px solid #fe5310;
+}
+.container {
+    display:flex;
+    flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.heading{
+    width: 285px;
+background-color: rgb(241, 241, 192) ;;
+margin: 20px 0;
+box-shadow: 5px 5px 4px #323131;
+text-align: center;
+color:rgb(241, 92, 6);
+font-weight: bold;
+}
+.note-input{
+    margin:30px 0;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+#addTxt{
+    width: 60vw;
+height: 85px;
+resize: none;
+padding: 0 5px;
+color: red;
+font-weight: bolder;
+border: 2px solid bisque;
+}
+#addBtn
+    {
+        margin: 20px 0;
+        background-color: #fe5310;
+        color: yellow;
+        font-weight: bold;
+        padding: 7px;
+        border: 2px solid yellow;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+#addBtn:hover{
+    background-color: yellow;
+    color:#fe5310;
+    border:3px solid #fe5310;
+}
+#clear{
+    background-color: yellow;
+    color: orangered;
+    font-weight: bolder;
+    border: 2px solid orangered;
+    padding: 7px 13px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+#clear:hover{
+    background-color: orangered;
+    color:yellow;
+    border: 2px solid yellow;
+}
+.notes{
+    display: flex;
+flex-direction: column;
+
+align-items: center;
+}
+.noteCard{
+    display: flex;
+    background-color: rgb(241, 241, 192);
+    width: 60vw;
+    justify-content: space-between;
+    margin:14px 0;
+    align-items: center;
+    padding: 15px;
+    color: #fe5310;
+    font-weight: bolder;
+    box-shadow: 5px 5px 5px black;
+    
+}
+
+
+.dltBtn{
+    background-color: rgb(241, 241, 192);
+border: 2px solid #fe5310;
+color: #fe5310;
+font-weight: bolder;
+padding: 4px;
+border-radius: 8px;
+cursor: pointer;
+}
+.dltBtn:hover{
+    background-color:#fe5310 ;
+    color:rgb(241, 241, 192);
+    border: 2px  solid #fe5310 ;
+}
