@@ -6,24 +6,29 @@
 }
 
 body{
-    background: url("pattern2.jpg") repeat;
+    background: url("bg5.jpg") repeat;
     overflow-x: hidden;
     z-index:-1;
-    opacity: 0.9;
+    opacity: 0.93;
+    
 }
+
 nav{
     display: flex;
 justify-content: space-between;
-background-color: black;
+background-color: rgb(92, 8, 8);
 color: yellow;
 padding:15px;
+
 }
 .container{
     margin:30px 0;
 }
-.to-do{
+.to-do a{
     font-weight: bold;
 font-size: large;
+color:yellow;
+text-decoration: none;
 }
 
 .search input{
@@ -35,7 +40,7 @@ font-size: large;
 }
 
 .search-btn{
-    background-color: black;
+    background-color: rgb(92, 8, 8);
 color: yellow;
 border: 1.5px solid yellow;
 padding: 1px 5px;
@@ -43,23 +48,42 @@ border-radius: 5px;
 cursor: pointer;
 }
 .search-btn:hover{
-    color:#fe5310;
-    border:1.5px solid #fe5310;
+    background-color: yellow;
+    color:rgb(92, 8, 8);
+    border:1.5px solid rgb(92, 8, 8);
+}
+.main{
+    display: flex;
+justify-content: center;
 }
 .container {
+    margin:65px;
+    background: url("indexbg2.jpg") repeat;
+padding: 16px;
+    width:60vw;
     display:flex;
     flex-direction: column;
 justify-content: center;
 align-items: center;
+box-shadow: 5px 5px 4px #323131;
 }
 .heading{
     width: 285px;
-background-color: rgb(241, 241, 192) ;;
+background-color: rgb(241, 92, 6) ;;
 margin: 20px 0;
-box-shadow: 5px 5px 4px #323131;
+border-radius:8px;
 text-align: center;
-color:rgb(241, 92, 6);
+color:rgb(241, 241, 192);
 font-weight: bold;
+}
+#date{
+    color:orangered;
+    font-size: large;
+    font-weight: bolder;
+    border:2px solid orangered;
+    padding:5px;
+    /* border-radius: 8px; */
+    /* background-color: white; */
 }
 .note-input{
     margin:30px 0;
@@ -70,13 +94,13 @@ font-weight: bold;
 
 }
 #addTxt{
-    width: 60vw;
+    width: 40vw;
 height: 85px;
 resize: none;
 padding: 0 5px;
 color: red;
 font-weight: bolder;
-border: 2px solid bisque;
+border: 1px solid orangered;
 }
 #addBtn
     {
@@ -116,30 +140,31 @@ align-items: center;
 }
 .noteCard{
     display: flex;
-    background-color: rgb(241, 241, 192);
-    width: 60vw;
+    background-color: #fe5310;
+    width: 40vw;
     justify-content: space-between;
     margin:14px 0;
     align-items: center;
     padding: 15px;
-    color: #fe5310;
+    color:  rgb(241, 241, 192);
     font-weight: bolder;
-    box-shadow: 5px 5px 5px black;
+   border-radius:8px;
+   font-size: large;
     
 }
 
 
 .dltBtn{
-    background-color: rgb(241, 241, 192);
-border: 2px solid #fe5310;
-color: #fe5310;
+    background-color:  #fe5310;
+border: 2px solid rgb(241, 241, 192);
+color: rgb(241, 241, 192);
 font-weight: bolder;
 padding: 4px;
 border-radius: 8px;
 cursor: pointer;
 }
 .dltBtn:hover{
-    background-color:#fe5310 ;
-    color:rgb(241, 241, 192);
-    border: 2px  solid #fe5310 ;
+    background-color:rgb(241, 241, 192) ;
+    color:#fe5310;
+    border: 2px  solid rgb(241, 241, 192) ;
 }
