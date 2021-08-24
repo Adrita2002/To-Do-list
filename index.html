@@ -6,30 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="/css/all.min.css">
+    <link rel="stylesheet" href="responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <nav>
-        <div class="to-do">To-Do</div>
+        <div class="to-do"><a href="home.html">To-Do</a></div>
         <div class="search">
             <input type="text" id="searchTxt" placeholder="Search Keyword">
             <button class="search-btn">Search</button>
         </div>
     </nav>
+<div class="main">
     <div class="container">
        <div class="heading">
            <h1 class="main-heading">Welcome to To-Do</h1>
        </div>
+       <div id="date"><p></p></div>
        <div class="note-input">
            <textarea name="Add Note" id="addTxt" cols="30" rows="10" placeholder="Add your list here"></textarea>
            <button id="addBtn">Add to List</button>
            
        </div>
        <div class="notes" id="row">
-        <!-- <button id="clear" onclick="clearAll()">Clear All</button> -->
+           
            <!-- <div class="noteCard">
                 <p></p>
                    
@@ -40,7 +42,7 @@
        </div>
        </div>
     </div>
+</div>
 </body>
 <script src="app.js"></script>
-
 </html>
