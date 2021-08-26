@@ -64,3 +64,37 @@ function showNotes() {
         notesElm.innerHTML="<p style='color:rgb(241, 92, 6)'>Please add stuff to your to-do list now!</p>"//incase there is nothing to show
     }
 }
+//function to delete note
+function deleteNote(index) {
+    // console.log("I am deleting");
+    // console.log(index);
+    //now we obtaine the array again from the local storage
+    let notes = localStorage.getItem("notes");
+    if(notes==null){
+        notesObj=[];
+
+    }
+    else{
+        notesObj=JSON.parse(notes);
+    }
+
+    notesObj.splice(index,1);//to delete the items of that index
+    localStorage.setItem("notes",JSON.stringify(notesObj));//this is done t update the local storage now with the updated array
+    showNotes();//to display the notes now
+}
+
+//clear all button
+function clearAll() {
+    let notes = localStorage.getItem("notes");
+    if(notes==null){
+        notesObj=[];
+
+    }
+    else{
+        notesObj=JSON.parse(notes);
+    }
+
+    notesObj.splice(0,notesObj.length);//all items of array are removed
+    localStorage.setItem("notes",JSON.stringify(notesObj));//this is done t update the local storage now with the updated array
+    showNotes();//to display the notes now
+}
