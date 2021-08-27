@@ -1,0 +1,8 @@
+@media  screen and (max-width:670px) {
+    .heading{
+        width:50vw;
+    }
+    .heading.dark{
+        width:50vw;
+    }
+}

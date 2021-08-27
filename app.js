@@ -62,7 +62,7 @@ function showNotes() {
     }
     else{
         
-        notesElm.innerHTML="<p style='color:rgb(241, 92, 6)'>Please add stuff to your to-do list now!</p>"//incase there is nothing to show
+        notesElm.innerHTML="<p class='msg'>Please add stuff to your to-do list now!</p>"//incase there is nothing to show
     }
 }
 //function to delete note
@@ -117,4 +117,69 @@ searchTxt.addEventListener("input",function () {
         
     })
    
+})
+//Dark Mode
+let darkMode=localStorage.getItem("darkMode");
+
+ const darkBtn=document.getElementById("darkBtn");
+ const lightBtn=document.getElementById("lightBtn");
+ function enableDarkMode() {
+     //change the theme
+     document.body.classList.add("dark");
+     document.querySelector(".container").classList.add("dark");
+     document.querySelector("#navbar").classList.add("dark");
+     document.querySelector(".search input").classList.add("dark");
+     document.querySelector(".search-btn").classList.add("dark");
+     document.querySelector("#darkBtn").classList.add("dark");
+     document.querySelector("#lightBtn").classList.add("dark");
+     document.querySelector(".heading").classList.add("dark");
+     document.querySelector("#date").classList.add("dark");
+     document.querySelector("#addTxt").classList.add("dark");
+     document.querySelector("#addBtn").classList.add("dark");
+    document.querySelector("#darkBtn").style.display="none";
+    document.querySelector("#lightBtn").style.display="flex";
+     localStorage.setItem("darkMode","enabled");
+ }
+ function disableDarkMode() {
+    //change the theme
+    document.body.classList.remove("dark");
+    document.querySelector(".container").classList.remove("dark");
+    document.querySelector("#navbar").classList.remove("dark");
+    document.querySelector(".search input").classList.remove("dark");
+    document.querySelector(".search-btn").classList.remove("dark");
+    document.querySelector("#darkBtn").classList.remove("dark");
+    document.querySelector("#lightBtn").classList.remove("dark");
+    document.querySelector(".heading").classList.remove("dark");
+    document.querySelector("#date").classList.remove("dark");
+    document.querySelector("#addTxt").classList.remove("dark");
+    document.querySelector("#addBtn").classList.remove("dark");
+    document.querySelector("#darkBtn").style.display="flex";
+    document.querySelector("#lightBtn").style.display="none";
+    localStorage.setItem("darkMode","disabled");
+}
+if (darkMode==="enabled") {
+    enableDarkMode();
+}
+else{
+    disableDarkMode();
+}
+ darkBtn.addEventListener("click",function () {
+     darkMode=localStorage.getItem("darkMode");
+    if (darkMode!="enabled"){
+        enableDarkMode();
+    }
+    else{
+        disableDarkMode();
+    }
+    // console.log(darkMode);
+ })
+ lightBtn.addEventListener("click",function () {
+    darkMode=localStorage.getItem("darkMode");
+   if (darkMode!="enabled"){
+       enableDarkMode();
+   }
+   else{
+       disableDarkMode();
+   }
+//    console.log(darkMode);
 })

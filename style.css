@@ -4,22 +4,30 @@
     box-sizing: border-box;
     font-family: 'Titillium Web', sans-serif;
 }
+body.dark{
+background-color: #292C35;
+background: url("darkbg.jpg") repeat center;
 
+}
 body{
-    background: url("bg5.jpg") repeat;
+    background: url("indexbg2.jpg") repeat;
     overflow-x: hidden;
     z-index:-1;
     opacity: 0.93;
     
 }
 
-nav{
+#navbar{
     display: flex;
 justify-content: space-between;
 background-color: rgb(92, 8, 8);
 color: yellow;
 padding:15px;
 
+}
+#navbar.dark{
+    background-color: black;
+    opacity:0.87;
 }
 .container{
     margin:30px 0;
@@ -38,6 +46,13 @@ text-decoration: none;
     border:1px solid white;
     padding:0 4px;
 }
+.search input.dark{
+    width: 35vw;
+    /* background-color: rgb(241, 241, 192); */
+    color:black;
+    border:1px solid white;
+    padding:0 4px;
+}
 
 .search-btn{
     background-color: rgb(92, 8, 8);
@@ -47,10 +62,77 @@ padding: 1px 5px;
 border-radius: 5px;
 cursor: pointer;
 }
+.search-btn.dark{
+    background-color: black;
+    color: yellow;
+    border: 1.5px solid yellow;
+    padding: 1px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
 .search-btn:hover{
     background-color: yellow;
     color:rgb(92, 8, 8);
     border:1.5px solid rgb(92, 8, 8);
+}
+.search-btn.dark:hover{
+    background-color: yellow;
+    color:black;
+    border:1.5px solid #292C35;
+}
+#darkBtn{
+    background-color: rgb(92, 8, 8);
+color: yellow;
+border: 1.5px solid yellow;
+padding: 1px 5px;
+border-radius: 5px;
+cursor: pointer;
+height: 25px;
+}
+#darkBtn.dark{
+    background-color: black;
+color: yellow;
+border: 1.5px solid yellow;
+padding: 1px 5px;
+border-radius: 5px;
+cursor: pointer;
+height: 25px;
+}
+#darkBtn:hover{
+    
+color: orange;
+border: 1.5px solid orange;
+padding: 1px 5px;
+border-radius: 5px;
+cursor: pointer;
+height: 25px;
+}
+#lightBtn{
+    background-color: rgb(92, 8, 8);
+color: yellow;
+border: 1.5px solid yellow;
+padding: 1px 5px;
+border-radius: 5px;
+cursor: pointer;
+height: 25px;
+}
+#lightBtn.dark{
+    background-color: black;
+color: yellow;
+border: 1.5px solid yellow;
+padding: 1px 5px;
+border-radius: 5px;
+cursor: pointer;
+height: 25px;
+}
+#lightBtn:hover{
+    
+color: orange;
+border: 1.5px solid orange;
+padding: 1px 5px;
+border-radius: 5px;
+cursor: pointer;
+height: 25px;
 }
 .main{
     display: flex;
@@ -58,7 +140,7 @@ justify-content: center;
 }
 .container {
     margin:65px;
-    background: url("indexbg2.jpg") repeat;
+    background: url("bg5.jpg") repeat;
 padding: 16px;
     width:60vw;
     display:flex;
@@ -67,23 +149,53 @@ justify-content: center;
 align-items: center;
 box-shadow: 5px 5px 4px #323131;
 }
+.container.dark{
+    margin:65px;
+    background: url("darkbg.jpg") repeat center;
+padding: 16px;
+    width:60vw;
+    display:flex;
+    flex-direction: column;
+justify-content: center;
+align-items: center;
+border:3px solid rgb(241, 241, 192);
+
+}
 .heading{
     width: 285px;
-background-color: rgb(241, 92, 6) ;;
+background-color: rgb(241, 241, 192);
 margin: 20px 0;
+border:2px solid rgb(241, 241, 192);
+border-radius:8px;
+text-align: center;
+color:rgb(241, 92, 6);
+font-weight: bold;
+}
+.heading.dark{
+    width: 285px;
+background-color: transparent;
+margin: 20px 0;
+border:2px solid rgb(241, 241, 192);
 border-radius:8px;
 text-align: center;
 color:rgb(241, 241, 192);
 font-weight: bold;
 }
 #date{
-    color:orangered;
+    color:rgb(241, 241, 192);
     font-size: large;
     font-weight: bolder;
-    border:2px solid orangered;
+    border:2px solid rgb(241, 241, 192);
     padding:5px;
     /* border-radius: 8px; */
     /* background-color: white; */
+}
+#date.dark{
+    color:rgb(241, 241, 192);
+    font-size: large;
+    font-weight: bolder;
+    border:2px solid rgb(241, 241, 192);
+    padding:5px;
 }
 .note-input{
     margin:30px 0;
@@ -102,14 +214,35 @@ color: red;
 font-weight: bolder;
 border: 1px solid orangered;
 }
+#addTxt.dark{
+    width: 40vw;
+height: 85px;
+resize: none;
+padding: 0 5px;
+color: black;
+font-weight: bolder;
+border: 1px solid white;
+
+}
 #addBtn
     {
         margin: 20px 0;
-        background-color: #fe5310;
+        background-color: rgb(241, 92, 6);;
         color: yellow;
         font-weight: bold;
         padding: 7px;
         border: 2px solid yellow;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    #addBtn.dark
+    {
+        margin: 20px 0;
+        background-color: transparent;
+        color: yellowgreen;
+        font-weight: bold;
+        padding: 7px;
+        border: 2px solid yellowgreen;
         border-radius: 8px;
         cursor: pointer;
     }
@@ -118,19 +251,29 @@ border: 1px solid orangered;
     color:#fe5310;
     border:3px solid #fe5310;
 }
+#addBtn.dark:hover{
+    background-color: yellowgreen;
+    color:#292C35;
+    border:3px solid yellowgreen;
+}
+p.msg{
+    color:rgb(241, 241, 192);
+    font-size: large;
+}
 #clear{
     background-color: yellow;
     color: orangered;
     font-weight: bolder;
-    border: 2px solid orangered;
+    border: 2px solid yellow;
     padding: 7px 13px;
     border-radius: 8px;
     cursor: pointer;
 }
+
 #clear:hover{
     background-color: orangered;
     color:yellow;
-    border: 2px solid yellow;
+    border: 2px solid orangered;
 }
 .notes{
     display: flex;
@@ -140,31 +283,47 @@ align-items: center;
 }
 .noteCard{
     display: flex;
-    background-color: #fe5310;
+    background-color: rgb(241, 241, 192);
     width: 40vw;
     justify-content: space-between;
     margin:14px 0;
     align-items: center;
     padding: 15px;
-    color:  rgb(241, 241, 192);
+    
     font-weight: bolder;
    border-radius:8px;
-   font-size: large;
+   font-size: large;   
+}
+.noteCard.dark{
+    display: flex;
+    background-color: transparent;
+    width: 40vw;
+    justify-content: space-between;
+    margin:14px 0;
+    align-items: center;
+    padding: 15px;
     
+    font-weight: bolder;
+    border: 2px solid white;
+   border-radius:8px;
+   font-size: large;   
+}
+p{
+    color: rgb(241, 75, 24);
 }
 
 
 .dltBtn{
-    background-color:  #fe5310;
-border: 2px solid rgb(241, 241, 192);
-color: rgb(241, 241, 192);
+    background-color:  transparent;
+border: 2px solid red;
+color: red;
 font-weight: bolder;
 padding: 4px;
 border-radius: 8px;
 cursor: pointer;
 }
 .dltBtn:hover{
-    background-color:rgb(241, 241, 192) ;
-    color:#fe5310;
-    border: 2px  solid rgb(241, 241, 192) ;
+    background-color:red ;
+    color:rgb(241, 241, 192);
+    border: 2px  solid red ;
 }
