@@ -1,4 +1,5 @@
 // console.log("To-Do List");
+showNotes();//this is called so that the notes are displayed even when screen is refreshed
 //display date
 let date=document.getElementById("date");
 let today= new Date();//present date
@@ -98,3 +99,22 @@ function clearAll() {
     localStorage.setItem("notes",JSON.stringify(notesObj));//this is done t update the local storage now with the updated array
     showNotes();//to display the notes now
 }
+//keyword searching
+let search=document.getElementById("searchTxt");
+searchTxt.addEventListener("input",function () {
+    let inputVal=search.value.toLowerCase();//to remove case sensitivity
+    // console.log("Input event",inputVal);
+    let noteCards=document.getElementsByClassName("noteCard");
+    
+    Array.from(noteCards).forEach(function (element) {
+        let cardTxt=element.getElementsByTagName("p")[0].innerText.toLowerCase();
+        if(cardTxt.includes(inputVal)){
+            element.style.display="flex";
+        }
+        else{
+            element.style.display="none";
+        }
+        
+    })
+   
+})
