@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+    
+}
+body{
+    background: url("homebg.jpeg") repeat;
+    overflow-x: hidden;
+    z-index:-1;
+    display: flex;
+justify-content: center;
+}
+
+.main{    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 32vh 0;
+    background: url("original.jpg") ;
+    padding:50px;
+    width:60vw;
+    box-shadow: 6px 6px 5px black;
+}
+h1{
+    color: #f86329;
+    text-align: center;
+}
+p{
+    text-align: center;
+    
+}
+li{
+    color:#f27c4d;
+    font-weight: bolder;
+    font-size: large;
+}
+button{
+    background-color: #f27c4d;
+padding: 6px;
+margin: 10px 0;
+border: 2px solid orange;
+border-radius: 8px;
+}
+button a{
+    text-decoration: none;
+color: white;
+font-weight: bolder;
+}
