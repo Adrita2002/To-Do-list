@@ -51,7 +51,7 @@ function showNotes() {
     let html="";
     notesObj.forEach(function(element,index) {
         html+=`<div class="noteCard">
-        <p>${element}</p>
+        <p class="msg1" style="word-wrap: break-word">${element}</p>
 
       <button onclick="deleteNote(this.id)" id="${index}"class="dltBtn">Delete</button>
        

@@ -256,9 +256,16 @@ border: 1px solid white;
     color:#292C35;
     border:3px solid yellowgreen;
 }
-p.msg{
+.msg{
     color:rgb(241, 241, 192);
     font-size: large;
+    
+}
+.msg1{
+    color:orangered;
+    font-size: large;
+    width:20vw;
+    
 }
 #clear{
     background-color: yellow;
