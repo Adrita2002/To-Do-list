@@ -27,6 +27,9 @@ addBtn.addEventListener("click",function (e) {
         notesObj.push(addTxt.value);//the notes we added is passed on to join the notes i.e. to update the notes IF a blank note is not entered
         
     }
+    else{
+        alert("Please enter something!");
+    }
     
     localStorage.setItem("notes",JSON.stringify(notesObj));//the updated array is now converted to string and added to the local storage
     addTxt.value="";//once Add to List btn is clicked, the note written is added to the local storage AND the textarea must now be cleared so that new notes can be added
