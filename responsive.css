@@ -6,3 +6,28 @@
         width:50vw;
     }
 }
+@media screen and (max-width:450px) {
+    .container{
+      width:90vw;
+     margin:10vh 0;
+    }
+    .container.dark{
+        width:90vw;
+       margin:10vh 0;
+      }
+    #addTxt{
+        width: 60vw;
+    }
+    #addTxt.dark{
+        width: 60vw;
+    }
+    .noteCard{
+        width:60vw;
+
+    }
+    .noteCard.dark{
+        width:60vw;
+        
+    }
+
+}

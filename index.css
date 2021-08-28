@@ -48,3 +48,9 @@ button a{
 color: white;
 font-weight: bolder;
 }
+@media  screen and (max-width:450px) {
+    .main{
+    width:90vw;
+    margin:20vh 0;
+}
+}
